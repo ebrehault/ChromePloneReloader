@@ -16,6 +16,8 @@ function callback(tabs) {
   parser.href = url;
   var zmi_url = url.indexOf('?') > 0  ? url.substr(0, url.indexOf('?')) + '/manage_main' : url + '/manage_main';
   document.getElementById('zmi').addEventListener('click', openLink(zmi_url));
+  var rendering_url = url.indexOf('?') > 0  ? url.substr(0, url.indexOf('?')) + '/test_rendering' : url + '/test_rendering';
+  document.getElementById('rendering').addEventListener('click', openLink(rendering_url));
   var diazo_off_url = url.indexOf('?') > 0  ? url + '&diazo.off=1' : url + '?diazo.off=1';
   document.getElementById('diazo-off').addEventListener('click', openLink(diazo_off_url));
   var diazo_debug_url = url.indexOf('?') > 0  ? url + '&diazo.debug=1' : url + '?diazo.debug=1';
